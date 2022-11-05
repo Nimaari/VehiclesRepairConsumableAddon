@@ -18,10 +18,10 @@ It only checks for the name (it uses ``.contains()`` which means it only cares i
 
 Here's a rundown of every entry in the configuration file for those requiring an explanation.
 
-``sendMessageOnNotEnoughMoney: true`` Should the plugin inform you if you don't have enough money?
-``sendMessageOnSuccessfulRepair: true`` Should the plugin inform you if the repair was successful?
-``sendMessageOnFullHealthVehicle: true`` Should the plugin inform you if the vehicle has full health already?
-``sendMessageOnInvalidVehicle: true`` Should the plugin inform you that you are not in a vehicle or is the vehicle valid?
+``sendMessageOnNotEnoughMoney: true`` Should the plugin inform you if you don't have enough money?  
+``sendMessageOnSuccessfulRepair: true`` Should the plugin inform you if the repair was successful?  
+``sendMessageOnFullHealthVehicle: true`` Should the plugin inform you if the vehicle has full health already?  
+``sendMessageOnInvalidVehicle: true`` Should the plugin inform you that you are not in a vehicle or is the vehicle valid?  
 
 ```
 notEnoughMoneyMessage: '&8[&eVehiclesRepairConsumableAddon&8] &cYou do not have enough
@@ -32,7 +32,7 @@ alreadyFullHealthVehicleMessage: '&8[&eVehiclesRepairConsumableAddon&8] &cThis v
 invalidVehicleMessage: '&8[&eVehiclesRepairConsumableAddon&8] &cYou are not riding
   a vehicle!'
 ```
-This is simply the messages themselves. Colorcodes supported.
+This is simply the messages themselves. Colorcodes supported.  
 
 ``repairPrice: 0.0`` How much should the repair cost you? If set to 0.0, it disables the economy feature.  
 ``itemName: Repair Tool`` Name check for the item. If it contains that string of characters, it will be considered valid. WARNING! This uses **CONTAINS**, not EQUALS.  
