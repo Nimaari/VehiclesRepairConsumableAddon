@@ -34,7 +34,7 @@ invalidVehicleMessage: '&8[&eVehiclesRepairConsumableAddon&8] &cYou are not ridi
 ```
 This is simply the messages themselves. Colorcodes supported.
 
-``repairPrice: 0.0`` How much should the repair cost you? If set to 0.0, it disables the economy feature.\n
-``itemName: Repair Tool`` Name check for the item. If it contains that string of characters, it will be considered valid. WARNING! This uses **CONTAINS**, not EQUALS.\n 
-``itemMaterial: GOLDEN_PICKAXE`` Which item type should the repair item be? Click [here](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html) to see a list of valid values.\n
-``deleteRepairItemOnRepair: true`` Should the item be removed (also works with stackable items, it decreases by 1) once the repair is complete? \n
+``repairPrice: 0.0`` How much should the repair cost you? If set to 0.0, it disables the economy feature.  
+``itemName: Repair Tool`` Name check for the item. If it contains that string of characters, it will be considered valid. WARNING! This uses **CONTAINS**, not EQUALS.  
+``itemMaterial: GOLDEN_PICKAXE`` Which item type should the repair item be? Click [here](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html) to see a list of valid values.  
+``deleteRepairItemOnRepair: true`` Should the item be removed (also works with stackable items, it decreases by 1) once the repair is complete?  
