@@ -21,7 +21,7 @@ Here's a rundown of every entry in the configuration file for those requiring an
 ``sendMessageOnNotEnoughMoney: true`` Should the plugin inform you if you don't have enough money?  
 ``sendMessageOnSuccessfulRepair: true`` Should the plugin inform you if the repair was successful?  
 ``sendMessageOnFullHealthVehicle: true`` Should the plugin inform you if the vehicle has full health already?  
-``sendMessageOnInvalidVehicle: true`` Should the plugin inform you that you are not in a vehicle or is the vehicle valid?  
+``sendMessageOnInvalidVehicle: true`` Should the plugin inform you that you are not in a vehicle or if the vehicle is invalid?  
 
 ```
 notEnoughMoneyMessage: '&8[&eVehiclesRepairConsumableAddon&8] &cYou do not have enough
