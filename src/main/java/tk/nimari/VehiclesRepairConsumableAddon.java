@@ -69,10 +69,26 @@ public final class VehiclesRepairConsumableAddon extends JavaPlugin {
                             Vehicle vehicle = VehiclesMain.getPlugin().getPlayerVehicle(player);
 
                             if (vehicle.getMainStand().getHealth() != vehicle.getMainStand().getMaxHealth()) {
-                                RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
-                                Economy econ = rsp.getProvider();
-                                EconomyResponse er = econ.withdrawPlayer(player, config.getDouble("repairPrice"));
-                                if (er.transactionSuccess()) {
+                                if (config.getDouble("repairPrice") != 0.0) {
+                                    RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
+                                    Economy econ = rsp.getProvider();
+                                    EconomyResponse er = econ.withdrawPlayer(player, config.getDouble("repairPrice"));
+                                    if (er.transactionSuccess()) {
+
+                                        if (config.getBoolean("deleteRepairItemOnRepair"))
+                                            player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount() - 1);
+
+                                        if (config.getBoolean("sendMessageOnSuccessfulRepair"))
+                                            player.sendMessage(config.getString("successfulRepairMessage").replace("&", "§"));
+
+                                        vehicle.setHealth(vehicle.getMainStand().getMaxHealth());
+
+                                    } else {
+                                        if (config.getBoolean("sendMessageOnNotEnoughMoney"))
+                                            player.sendMessage(config.getString("notEnoughMoneyMessage").replace("&", "§"));
+                                    }
+
+                                } else {
 
                                     if (config.getBoolean("deleteRepairItemOnRepair"))
                                         player.getInventory().getItemInMainHand().setAmount(player.getInventory().getItemInMainHand().getAmount() - 1);
@@ -81,10 +97,6 @@ public final class VehiclesRepairConsumableAddon extends JavaPlugin {
                                         player.sendMessage(config.getString("successfulRepairMessage").replace("&", "§"));
 
                                     vehicle.setHealth(vehicle.getMainStand().getMaxHealth());
-
-                                } else {
-                                    if (config.getBoolean("sendMessageOnNotEnoughMoney"))
-                                        player.sendMessage(config.getString("notEnoughMoneyMessage").replace("&", "§"));
                                 }
 
 

@@ -2,6 +2,7 @@ name: VehiclesRepairConsumableAddon
 version: ${project.version}
 main: tk.nimari.VehiclesRepairConsumableAddon
 api-version: 1.14
-depend: [Vehicles, Vault]
+depend: [Vehicles]
+softdepend: [Vault]
 authors: [Nimari]
 description: An addon made for the Minecraft Vehicles plugin that allows for economy-based vehicle repair.
